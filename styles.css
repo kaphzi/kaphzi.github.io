@@ -1,0 +1,12 @@
+a {
+    font-family: Calibri;
+    font-size: 8em;
+    color: white;
+    align-self: center;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
