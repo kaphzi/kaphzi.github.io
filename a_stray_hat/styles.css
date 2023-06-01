@@ -8,10 +8,15 @@
     src: url(RDR\ Lino\ Regular.woff);
 }
 
+html {
+    max-height: 100vh;
+}
+
 body {
     display: grid;
     height: 100vh;
-    width: auto;
+    width: 100vw;
+    min-width: 60vw;
     margin: 0;
     grid-template-rows: 80% 20%;
 }
@@ -57,25 +62,6 @@ li > a, li>a:visited, li>a:active {
     color: rgb(255, 255, 255);
 }
 
-header {
-    grid-row: 1/2;
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 100%;
-    background-color: black;
-}
-
-main {
-    grid-row: 2/3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    word-wrap: break-word;
-    padding-bottom: 100px;
-}
-
 main > p {
     margin: 0px 500px;
 }
@@ -86,7 +72,8 @@ main > p {
     text-align: center;
     font-family: Chinese Rocks Rg, sans-serif;
     color: white;
-    font-size: 13em;
+    word-wrap: nowrap;
+    font-size: 10vw;
     margin-top: 100px;
 }
 
@@ -103,6 +90,7 @@ main > p {
 }
 
 .buttons {
+    flex-wrap: nowrap;
     background-color: black;
     grid-column: 1/1;
     grid-row: 3/4;
@@ -111,19 +99,77 @@ main > p {
     align-items: flex-end;
     flex-direction: row;
     padding-right: 100px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
-.button {
-    color: white;
-    font-family: RDR Lino Regular;
-    font-size: 1.5em;
-    padding-right: 30px;
-}
+
 
 img {
     height: auto;
     width: auto;
     margin: 0;
     padding: 0;
+}
+
+.square-button {
+    background-color: white;
+    font-family: Chinese Rocks Rg;
+    color: black;
+    font-size: 1em;
+    padding: 0px 10px;
+    margin: 0px 10px;
+}
+
+
+span {
+    color: rgb(210,0,0);
+}
+
+#language>p {
+    font-size: 1.5em;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: RDR Lino Regular;
+    font-size: 1.5em;
+    padding-right: 30px;
+}
+
+
+.fullPage {
+    display:grid;
+    height: 100vh;
+    width: auto;
+    grid-template-rows: 35% 35% 30%;
+    background-color: black;
+}
+
+
+header {
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 100%;
+    background-color: black;
+}
+
+main {
+    background-color: black;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    word-wrap: break-word;
+    padding-bottom: 100px;
+}
+
+.titleMain {
+    background-image: url(title1_copy.png);
+    background-position: bottom;
 }
