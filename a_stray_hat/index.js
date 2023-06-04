@@ -45,7 +45,11 @@ document.onkeydown = function (e) {
         case "l":
           document.getElementById("linksEn").click();
           break;
-        
+        case "Enter":
+          lang = "en";
+          document.getElementById("beginSceneEn").click();
+        case "Escape":
+          document.getElementById("quit").click();
       }
 
     } else {
@@ -63,6 +67,11 @@ document.onkeydown = function (e) {
         case "l":
           document.getElementById("linksCn").click();
           break;
+        case "Enter":
+          lang = "cn";
+          document.getElementById("beginSceneCn").click();
+        case "Escape":
+          document.getElementById("quit").click();
         
       }
     }

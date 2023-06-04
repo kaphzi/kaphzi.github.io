@@ -3,7 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>A Stray Hat</title>
-    <link rel = "stylesheet" href="styles.css">
+    <link rel = "stylesheet" href="../templates/main.css">
+    <style type="text/css">
+      .titleMain {
+        background-image: url(title1_copy.png);
+        background-position: bottom;
+      }
+    </style>
   </head>
 
   <body>
@@ -23,7 +29,7 @@
           <button id="controlsEn" onclick="replaceWith('controlsPageEn')">Controls<span class="square-button">C</span></button>
           <button id="notesEn" onclick="replaceWith('notesPageEn')">Notes<span class="square-button">N</span></button>
           <button id="linksEn" onclick="replaceWith('linksPageEn')">Links<span class="square-button">L</span></button>
-          <button href="img_pages/1.html">Start<span class="square-button">↵</span></button>
+          <button id="beginSceneEn" onclick="location.href='scene.html#en'">Start<span class="square-button">↵</span></button>
       </div>
     </div>
 
@@ -46,13 +52,13 @@
           <button id="controlsEn" onclick="replaceWith('controlsPageEn')">Controls<span class="square-button">C</span></button>
           <button id="notesEn" onclick="replaceWith('notesPageEn')">Notes<span class="square-button">N</span></button>
           <button id="linksEn" onclick="replaceWith('linksPageEn')">Links<span class="square-button">L</span></button>
-          <button href="img_pages/1.html">Start<span class="square-button">↵</span></button>
+          <button id="beginSceneEn" onclick="location.href='scene.html#en'">Start<span class="square-button">↵</span></button>
       </div>
     </div>
 
     <div id="titlePageCn" class="fullPage titlePage cn" style="display:none">
       <header>
-        <h1 id="title" style="font-size:10em;">掉落的帽子</h1>
+        <h1 id="title" style="font-size:8vw;">掉落的帽子</h1>
         <div id="language">
           <span class="button"><button id="titleEn" onclick="replaceWith('titlePageEn')"><span class="square-button">Q</span>English</button> <button><span style="color: white; text-decoration: underline red; text-underline-position: under;">中文</span><span class="square-button">E</span></button></span>
         </div>
@@ -64,7 +70,7 @@
         <button id="controlsCn" onclick="replaceWith('controlsPageCn')">操作<span class="square-button">C</span></button>
         <button id="notesCn" onclick="replaceWith('notesPageCn')">声明<span class="square-button">N</span></button>
         <button id="linksCn" onclick="replaceWith('linksPageCn')">社交帐号<span class="square-button">L</span></button>
-        <button href="img_pages/1.html">开始<span class="square-button">↵</span></button>
+        <button id="beginSceneCn" onclick="location.href='scene.html#cn'">开始<span class="square-button">↵</span></button>
       </div>
 
     </div>
