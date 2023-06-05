@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A Stray Hat</title>
+    <link rel = "stylesheet" href="../templates/main.css">
+    <style type="text/css">
+      .titleMain {
+        background-image: url(main.jpg);
+        background-position: top;
+        background-repeat: no-repeat;
+      }
+      @media (orientation: portrait) {
+        
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div id="mainDisplay" class="fullPage titlePage eng">
+      <header>
+        <h1 id="title" style="font-size: 8em; align-self: center;"><span style="color: rgb(210,0,0)">I</span>n The Wake Of Thunde<span style="color: rgb(210,0,0)">r</span></h1>
+        <div id="language">
+          <span class="button"><button><span class="square-button">Q</span><span style="color: white; text-decoration: underline red; text-underline-position: under;">English</span></button>
+           <button id="titleCn" onclick="replaceWith('titlePageCn')">中文<span class="square-button">E</span></button></span>
+        </div>
+      </header>
+      <main class="titleMain">
+          <!--Background image: Arthur's hat lying in the grass. 0.png-->
+      </main>
+      <div class="buttons">
+          <button id="controlsEn" onclick="replaceWith('controlsPageEn')">Controls<span class="square-button">C</span></button>
+          <button id="notesEn" onclick="replaceWith('notesPageEn')">Notes<span class="square-button">N</span></button>
+          <button id="linksEn" onclick="replaceWith('linksPageEn')">Links<span class="square-button">L</span></button>
+          <button id="beginSceneEn" onclick="location.href='scene.html#en'">Start<span class="square-button">↵</span></button>
+          <button id="quit" onclick="location.href='../index.html'">Quit<span class="square-button">←</span></button>
+      </div>
+    </div>
+
+
+
+
+
+    <div id="titlePageEn" class="fullPage titlePage eng" style="display: none;">
+      <header>
+        <h1 id="title" style="font-size: 8em; align-self: center;"><span style="color: rgb(210,0,0)">I</span>n The Wake Of Thunde<span style="color: rgb(210,0,0)">r</span></h1>
+          <div id="language">
+            <span class="button"><button><span class="square-button">Q</span><span style="color: white; text-decoration: underline red; text-underline-position: under;">English</span></button>
+             <button id="titleCn" onclick="replaceWith('titlePageCn')">中文<span class="square-button">E</span></button></span>
+          </div>
+      </header>
+      <main class="titleMain">
+        <!--Background image: Arthur's hat lying in the grass. 0.png-->
+      </main>
+      <div class="buttons">
+          <button id="controlsEn" onclick="replaceWith('controlsPageEn')">Controls<span class="square-button">C</span></button>
+          <button id="notesEn" onclick="replaceWith('notesPageEn')">Notes<span class="square-button">N</span></button>
+          <button id="linksEn" onclick="replaceWith('linksPageEn')">Links<span class="square-button">L</span></button>
+          <button id="beginSceneEn" onclick="location.href='scene.html#en'">Start<span class="square-button">↵</span></button>
+          <button id="quit" onclick="location.href='../index.html'">Quit<span class="square-button">←</span></button>
+      </div>
+    </div>
+
+    <div id="titlePageCn" class="fullPage titlePage cn" style="display:none">
+      <header>
+        <h1 id="title" style="font-size:8vw;">暴雨之后</h1>
+        <div id="language">
+          <span class="button"><button id="titleEn" onclick="replaceWith('titlePageEn')"><span class="square-button">Q</span>English</button> <button><span style="color: white; text-decoration: underline red; text-underline-position: under;">中文</span><span class="square-button">E</span></button></span>
+        </div>
+      </header>
+      <main class="titleMain">
+        <!--Background image: Arthur's hat lying in the grass. 0.png-->
+      </main>
+      <div class="buttons">
+        <button id="controlsCn" onclick="replaceWith('controlsPageCn')">操作<span class="square-button">C</span></button>
+        <button id="notesCn" onclick="replaceWith('notesPageCn')">声明<span class="square-button">N</span></button>
+        <button id="linksCn" onclick="replaceWith('linksPageCn')">社交帐号<span class="square-button">L</span></button>
+        <button id="beginSceneCn" onclick="location.href='scene.html#cn'">开始<span class="square-button">↵</span></button>
+        <button id="quit" onclick="location.href='../index.html'">退出<span class="square-button">←</span></button>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div id="controlsPageEn" class="fullPage eng" style="display:none">
+      <main>
+        <!--Background image: Arthur's hat lying in the grass. 0.png-->
+        <p>Controls & notes:</p>
+        <ol>
+            <li><span>Click anywhere</span> on the image to continue.</li>
+            <li>Press <span>Space</span>/<span>right arrow</span>/<span>E</span> to go to the next image; <span>Q</span>/<span>left arrow</span> to go back.</li>
+            <li>Press <span>Esc</span> to go back to the title page.</li>
+        </ol>
+        </main>
+        <div class="buttons">
+            <button id="linksEn" onclick="replaceWith('titlePageEn')">Back<span class="square-button">Esc</span></button>
+        </div>
+    </div>
+
+    <div id="controlsPageCn" class="fullPage cn" style="display:none">
+      <main>
+        <!--Background image: Arthur's hat lying in the grass. 0.png-->
+        <p>操作：</p>
+        <ol>
+            <li><span>点击</span>任何地方以继续。</li>
+            <li>按下<span>空格</span>/<span>右箭头</span>/<span>E</span>翻到下一张图、<span>Q</span>/<span>左箭头</span>返回上一张图。</li>
+            <li>按下<span>Esc</span>返回标题界面。</li>
+        </ol>
+      </main>
+      <div class="buttons">
+        <button id="linksCn" onclick="replaceWith('titlePageCn')">返回<span class="square-button">Esc</span></button>
+      </div>
+    </div>
+
+
+
+
+
+    <div id="notesPageEn" class="fullPage eng" style="display:none">
+      <main>
+        <!--Background image: Arthur's hat lying in the grass. 0.png-->
+        <p id="AN"><span>A/N</span>:<br>
+          Henlo it's kaph :D I made this on a whim last year and spent a whole two months from October to Christmas making it.
+          The ending hurt me a little too much so I thought I may as well make my own cutscenes, and so this is what I made.
+          I wanted to create a convincing cutscene that spans the time from Charles going back to find Arthur alive, to their eventual happy ending.
+          I tried to make it convincing in all aspects, from their developing relationship to where they stayed while Arthur healed (Silent Stead in New Austin), 
+          while keeping the image itself composed in a way that is cinematic and conveys feeling. Turns out the most difficult part was coming up 
+          with dialogue that both fit the image and helps convey the plot.
+          <br><br>Anyway I posted this on Christmas and the responses was full of people bawling their eyes out so I guess I did a good job lol. 
+          I'm currently working on a continuation (Fool's Errand) so keep your eyes peeled for that!
+          </p>
+        </main>
+        <div class="buttons">
+          <button id="linksEn" onclick="replaceWith('titlePageEn')">Back<span class="square-button">Esc</span></button>
+        </div>
+    </div>
+
+    <div id="notesPageCn" class="fullPage cn" style="display:none">
+      <main>
+        <!--Background image: Arthur's hat lying in the grass. 0.png-->
+        <p id="AN"><span>( ;ↀ⌓ↀ)  ￢o(￣-￣ﾒ)</span><br>
+          大家好这里茫茫~这是我22年年底打完1周目被狠狠地伤透了心之后的产物，查瑟这么配不给他造谣出个he我都觉得对不起我天天搁这截图的功夫（？）
+          于是做了这个！
+          <br><br>另，本人是绝望的文盲……对话原文是英文，硬翻译成中文的，游戏也暂时没用过中文字幕，所以如果有任何对中文版对话的建议或捉虫欢迎告诉我！！
+          <br>可以直接在任何平台私戳我或者投递到我的<a href="https://kaphzzz.tumblr.com/ask" target="_blank" style="color: red; text-decoration: none;">tumblr提问箱</a>！感谢！
+        </p>
+      </main>
+      <div class="buttons">
+        <button id="linksCn" onclick="replaceWith('titlePageCn')">返回<span class="square-button">Esc</span></button>
+      </div>
+    </div>
+
+
+
+    <div id="linksPageEn" class="fullPage eng" style="display:none">
+      <main>
+        <!--Background image: Arthur's hat lying in the grass. 0.png-->
+        <p style="font-size: 1.3em;">Social links:</p>
+        <ul>
+            <li><span>Twitter: </span> <a href="https://www.twitter.com/es__kei" target="_blank">Zi @es__kei</a></li>
+            <li><span>Tumblr: </span> <a href="https://kaphzzz.tumblr.com/" target="_blank">@kaphzzz</a></li>
+            <li><span>AO3: </span> <a href="https://archiveofourown.org/users/kaph" target="_blank">kaph</a></li>
+            <li><span>微博：</span> <a href="https://weibo.com/u/2562556075/" target="_blank">@天易牌巧克力鸡蛋仔</a></li>
+        </ul>
+      </main>
+      <div class="buttons">
+        <button id="titleEn" onclick="replaceWith('titlePageEn')">Back<span class="square-button">Esc</span></button>
+      </div>
+    </div>
+
+    <div id="linksPageCn" class="fullPage cn" style="display:none">
+      <main>
+        <!--Background image: Arthur's hat lying in the grass. 0.png-->
+        <p style="font-size: 1.3em;">社交帐号</p>
+        <ul>
+            <li><span>Twitter:</span> <a href="https://www.twitter.com/es__kei" target="_blank">Zi @es__kei</a></li>
+            <li><span>Tumblr:</span> <a href="https://kaphzzz.tumblr.com/" target="_blank">@kaphzzz</a></li>
+            <li><span>AO3: </span> <a href="https://archiveofourown.org/users/kaph" target="_blank">kaph</a></li>
+            <li><span>微博：</span> <a href="https://weibo.com/u/2562556075/" target="_blank">@天易牌巧克力鸡蛋仔</a></li>
+        </ul>
+        </main>
+        <div class="buttons">
+          <button id="titleCn" onclick="replaceWith('titlePageCn')">返回<span class="square-button">Esc</span></button>
+        </div>
+    </div>
+
+
+
+
+  </body>
+  <script src="index.js"></script>
+</html>

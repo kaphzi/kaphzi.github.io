@@ -1,12 +1,156 @@
+@font-face {
+    font-family: "Chinese Rocks Rg";
+    src: url(chinese\ rocks\ rg.woff);
+}
+
+@font-face {
+    font-family: "RDR Lino Regular";
+    src: url(RDR\ Lino\ Regular.woff);
+}
+
+h1 {
+    font-family: Chinese Rocks Rg;
+    color: red;
+}
+
 a {
-    font-family: Calibri;
-    font-size: 8em;
+    text-decoration: none;
+}
+
+.link {
+    font-family: RDR Lino Regular;
+    font-size: 1em;
     color: white;
     align-self: center;
+    text-decoration: none;
 }
 
 body {
+    margin: 0;
     background-color: black;
+
+}
+
+#container {
+    background-image: url(background_imgs/1.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: none;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-rows: 10vh auto 20vh;
+    padding: 5vh 20%;
+    margin: 0;
+}
+
+header {
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 30% 40% 35%;
+    grid-auto-rows: 100%;
+}
+
+#cutscenes {
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+
+.card {
+    /* width: 100%; */
+    height: 25vh;
+    text-decoration: none;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    border-radius: 3%;
+    margin: 2%;
+    display: flex;
+}
+
+.card:hover{
+    border-width: 5px;
+    border-color: red;
+}
+
+.cutscene {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 5%;
+    background-size: cover;
+    backdrop-filter: sepia(30%) brightness(30%);
+}
+
+.cutscene:hover {
+    backdrop-filter: brightness(80%);
+    cursor: pointer;
+}
+
+.link:hover {
+    color: red;
+}
+
+
+
+
+#name {
+    grid-column: 2/3;
     display: flex;
     justify-content: center;
+}
+
+#language {
+    grid-column: 3/4;
+    text-decoration: none;
+    font-size: 0.5vw;
+}
+
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-family: RDR Lino Regular;
+    font-size: 1.5em;
+    padding-right: 30px;
+}
+.square-button {
+    background-color: white;
+    font-family: Chinese Rocks Rg;
+    color: black;
+    font-size: 1em;
+    padding: 0px 10px;
+    margin: 0px 10px;
+}
+
+
+h2 {
+    font-family: RDR Lino Regular;
+    color: white;
+}
+
+p {
+    color: white;
+    font-family: Noto;
+    word-wrap: normal;
+}
+
+
+@media(orientation: portrait){
+    
 }
