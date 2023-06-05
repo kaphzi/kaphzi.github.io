@@ -22,10 +22,6 @@ function replaceWith(id) {
     eng = false;
   }
   mainDisplay.innerHTML = ele.innerHTML;
-  // main.style = "display:block";
-  console.log(id);
-  console.log(titlePage);
-  console.log(eng);
 }
 
 document.onkeydown = function (e) {

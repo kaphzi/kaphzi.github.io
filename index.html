@@ -8,12 +8,14 @@
         <link rel = "stylesheet" href="styles.css">
     </head>
     <body>
-        <div id="container">
+        <div id="container"></div>
+
+        <div id="containerEn" style="display: none;">
             <header>
                 <h1 id="name">Kaph's works</h1>
                 <div id="language">
                     <span class="button"><button><span class="square-button">Q</span><span style="color: black; text-decoration: underline red; text-underline-position: under;">English</span></button>
-                     <button id="titleCn" onclick="replaceWith('titlePageCn')">中文<span class="square-button">E</span></button></span>
+                     <button id="titleCn" onclick="swapHTML('containerCn')">中文<span class="square-button">E</span></button></span>
                   </div>
                 <!-- <h2 class="description">I make fake cutscenes :3c</h2> -->
             </header>
@@ -56,11 +58,11 @@
                     <p class="description">They set the cross in place on a cool morning, marking the empty grave of Arthur Morgan.</p>
                 </div>
                 <!-- <h1>Fics & translations</h1> -->
-                <a href="">
+                <!-- <a href="">
                     <h2>【RDR2 | Charthur | Translation】Window Pain</h2>
                     <p class="description">Tags: Canon compliant; smut; dubious consent; angst; implied canon ending</p>
                     <p class="description">Charles, though, had never been interested in the subtle complexities of social relations within the gang.</p>
-                </a>
+                </a> -->
             </div>
             <footer>
                 <a href="https://www.twitter.com/es__kei" class="link" target="_blank">Twitter: Zi@es__kei</a>
@@ -74,32 +76,33 @@
 
         <div id="containerCn" style="display: none;">
             <header>
-                <h1 id="name">披胄战苍茫</h1>
+                <h1 id="name" style="font-size: 2.5em;">披胄战苍茫</h1>
                 <div id="language">
-                    <span class="button"><button id="titleEn" onclick="replaceWith('titlePageEn')"><span class="square-button">Q</span>English</button> <button><span style="color: white; text-decoration: underline red; text-underline-position: under;">中文</span><span class="square-button">E</span></button></span>
+                    <span class="button"><button id="titleEn" onclick="swapHTML('containerEn')"><span class="square-button">Q</span>English</button> <button><span style="color: white; text-decoration: underline red; text-underline-position: under;">中文</span><span class="square-button">E</span></button></span>
                 </div>
                 <!-- <h2 class="description">I make fake cutscenes :3c</h2> -->
             </header>
             <div id="cutscenes">
                 <h1>造谣截图</h1>
-                <a href="in_the_wake_of_thunder/index.html" class="card" style="background-image: url(in_the_wake_of_thunder/main.jpg);">
-                    <div class="cutscene">
+                <!-- <a href="in_the_wake_of_thunder/index.html" c  lass="card" style="background-image: url(in_the_wake_of_thunder/main.jpg);"> -->
+                    <div class="cutscene" onclick="window.location.href='in_the_wake_of_thunder/index.html'" style="background-image: url(in_the_wake_of_thunder/main.jpg);">
                         <h2 class="cutsceneTitle">暴雨之后</h2>
                         <p class="description">暴雨停息，日出带来一个熟悉的身影。</p>
                     </div>
-                </a>
-                <a href="tipping_point/index.html" class="card" style="background-image: url(tipping_point/main.jpg);">
-                    <div class="cutscene">
+                <!-- </a> -->
+                <!-- <a href="tipping_point/index.html" class="card" style="background-image: url(tipping_point/main.jpg);"> -->
+                    <div class="cutscene" onclick="window.location.href='tipping_point/index.html'" style="background-image: url(tipping_point/main.jpg);">
                         <h2 class="cutsceneTitle">紧绷的弦</h2>
                         <p class="description">猎人意识到危险时已经深陷其中。弓被拉开，弦被绷紧，蓄势待发。</p>
                     </div>
-                </a>
-                <a href="under_a_beating_sun/index.html" class="card" style="background-image: url(under_a_beating_sun/main.jpg);">
-                    <div class="cutscene">
+                <!-- </a> -->
+                <!-- <a href="under_a_beating_sun/index.html" class="card" style="background-image: url(under_a_beating_sun/main.jpg);"> -->
+                    <div class="cutscene" onclick="window.location.href='under_a_beating_sun/index.html'" style="background-image: url(under_a_beating_sun/main.jpg);">
                         <h2 class="cutsceneTitle">烈阳之下</h2>
                         <p class="description">茂密的树叶并不能提供足够的阴凉，不过这对假寐的人倒也不重要。</p>
                     </div>
-                </a>
+                <!-- </a> -->
+                
                 <h1>施工中……</h1>
                 <!-- <h1>Interactive cutscenes</h1> -->
                 <div class="cutscene">
@@ -119,11 +122,11 @@
                     <p class="description">他们在清晨树立了墓碑，纪念地下无人之墓。</p>
                 </div>
                 <!-- <h1>同人文+翻译</h1> -->
-                <a href="">
+                <!-- <a href="">
                     <h2>【RDR2 | 查瑟 | 翻译】Window Pain</h2>
                     <p class="description">Tags: Canon compliant; smut; dubious consent; angst; implied canon ending</p>
                     <p class="description">Charles, though, had never been interested in the subtle complexities of social relations within the gang.</p>
-                </a>
+                </a> -->
             </div>
             <footer>
                 <a href="https://www.twitter.com/es__kei" class="link" target="_blank">Twitter: Zi@es__kei</a>
@@ -134,4 +137,5 @@
         </div>
         </div>
     </body>
+    <script src="index.js"></script>
 </html>

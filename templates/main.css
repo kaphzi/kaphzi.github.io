@@ -38,7 +38,8 @@ li > a, li>a:visited, li>a:active {
 }
 
 main > p {
-    margin: 0px 500px;
+    margin: 0px 20%;
+    font-size: 1vw;
 }
 
 
@@ -56,6 +57,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-rows: 80% 20%;
+    background-color: black;
 }
 
 
@@ -115,7 +117,9 @@ span {
 }
 
 #language {
-    font-size: 100%;
+    display: inline;
+    align-self: right;
+    font-size: 0.9vw;
 }
 
 button {
@@ -156,4 +160,29 @@ main {
     font-size: 1.5em;
     word-wrap: break-word;
     padding-bottom: 100px;
+}
+
+
+
+@media (orientation: portrait) {
+    .fullPage {
+        grid-template-rows: 40% 20% 40%;
+    }
+
+    .buttons {
+        padding-bottom: 15vw;
+    }
+
+    main > p {
+        margin: 0px 20%;
+    }
+
+    main {
+        padding: 0;
+        background-position: bottom;
+    }
+
+    /* #notesPageEn, #notesPageCn {
+        gri
+    } */
 }
