@@ -29,6 +29,7 @@ ul>li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-size: 1em;
     /* background-image: url(https://static.wikia.nocookie.net/reddeadredemption/images/e/ec/DeadEyeCore.png/revision/latest/scale-to-width-down/180?cb=20181204021721);
     background-size: 10px; */
 }
@@ -44,10 +45,12 @@ li > a, li>a:visited, li>a:active {
 
 main > p {
     margin: 0px 20%;
-    font-size: 1vw;
+    font-size: 2vw;
 }
 
-
+h2 {
+    font-size: 1.5em;
+}
 
 
 
@@ -138,7 +141,7 @@ button {
 }
 
 
-.fullPage {
+.titlePage {
     display:grid;
     height: 100vh;
     width: auto;
@@ -167,6 +170,10 @@ main {
     padding-bottom: 100px;
 }
 
+main > p {
+    font-size: 1.2vw;
+}
+
 #langButton {
     display: none;
     font-family: RDR Lino Regular;
@@ -175,7 +182,11 @@ main {
 
 @media (orientation: portrait) {
     .fullPage {
-        grid-template-rows: 40% 20% 40%;
+        grid-template-rows: 30% 30% 40%;
+    }
+
+    .fullPage:has(#AN){
+        grid-template-rows: 70% 30%;
     }
 
     .buttons {
@@ -183,7 +194,8 @@ main {
     }
 
     main > p {
-        margin: 0px 20%;
+        margin: 0px 10%;
+        font-size: 2vh;
     }
 
     main {
@@ -193,7 +205,7 @@ main {
     }
     #title {
         margin: auto;
-        
+        font-size: 8vw;
     }
 
 
@@ -210,6 +222,15 @@ main {
         text-decoration: underline red;
     }
 
+    #AN {
+        font-size: 2vw;
+    }
+    main:has(#AN){
+        grid-row: 1/2;
+        padding: 10%;
+    }
+    
+
     .buttons {
         display: flex;
         flex-direction: column;
@@ -219,11 +240,21 @@ main {
         padding-top: 5%;
         padding-bottom: 10%;
     }
+    main:has(#AN) + .buttons {
+        grid-row: 2/3;
+    }
     .buttons > button {
         margin-top: 3%;
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
     .square-button {
         display: none;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+    li {
+        font-size: 2vw;
     }
 }
