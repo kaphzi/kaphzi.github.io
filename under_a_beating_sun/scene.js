@@ -39,3 +39,28 @@ function swapImg(n) {
     console.log(imgSrc + ""+imgNum + ".png");
 }
 
+
+
+// mobile swipe
+
+let touchstartX = 0
+let touchendX = 0
+    
+function checkDirection() {
+  if (touchendX < touchstartX) {
+    // swiped left; go to next img
+    swapImg(1);
+  }
+  if (touchendX > touchstartX) {
+    swapImg(0);
+  }
+}
+
+document.addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX
+})
+
+document.addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX
+  checkDirection()
+})
