@@ -22,3 +22,11 @@ window.addEventListener('load', function() {
 function swapHTML(i){
     c.innerHTML = document.getElementById(i).innerHTML;
 }
+
+// function changeBG(){
+//     let n = Math.floor(Math.random() * 8);
+//     console.log(n);
+//     document.body.style.backgroundImage = 'url(images/rdr'+n+'\.jpg)';
+// }
+
+// changeBG();

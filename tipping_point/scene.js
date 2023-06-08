@@ -22,7 +22,7 @@ document.onkeydown = function (e){
         swapImg(1);
     } else if(e.key=="q" || e.key=="ArrowLeft"){
         swapImg(0);
-    } else if(e.key=="Escape"){
+    } else if(e.key=="Escape" || e.code == "Escape"){
         window.location.href = "index.html";
     }
 
