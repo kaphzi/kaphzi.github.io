@@ -1,8 +1,6 @@
 var mainImg = document.getElementById("mainImg");
 var imgSrc = "imagesEn/";
-var imgNum = 1;
 
-var totalImgs = 6;
 
 
 
@@ -11,6 +9,7 @@ if(window.location.href.slice(-2,) == "en"){
 } else if(window.location.href.slice(-2,) == "cn"){
     imgSrc = "imagesCn/";
     document.getElementsByTagName("title")[0].innerHTML = "烈阳之下";
+    document.getElementById("quit").innerHTML = "返回";
     mainImg.src = imgSrc + "1.png";
 }
 
@@ -31,12 +30,25 @@ document.onkeydown = function (e){
 function swapImg(n) {
     if(n == 0 && imgNum > 1){
         // prev img
+        if(imgNum > totalImgs){
+            document.getElementById("main").innerHTML = document.getElementById("image").innerHTML;
+            // document.body.innerHTML = document.getElementById("image").innerHTML;
+            mainImg = document.getElementById("mainImg");
+        }
         imgNum --;
-    } else if(n==1 && imgNum < totalImgs) {
-        imgNum ++;
+        mainImg.src = imgSrc + ""+imgNum + ".png";
+        console.log(imgSrc + ""+imgNum + ".png");
+    } else if(n==1 && imgNum <= totalImgs) {
+        if(imgNum < totalImgs){
+            imgNum ++;
+            mainImg.src = imgSrc + ""+imgNum + ".png";
+        }
+        else if(imgNum == totalImgs){
+            document.getElementById("main").innerHTML = document.getElementById("end").innerHTML;
+            imgNum ++;
+        }
+        
     }
-    mainImg.src = imgSrc + ""+imgNum + ".png";
-    console.log(imgSrc + ""+imgNum + ".png");
 }
 
 

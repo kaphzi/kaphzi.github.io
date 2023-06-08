@@ -8,10 +8,6 @@
       .titleMain {
         background-image: url(main.jpg);
         background-position: top;
-        background-repeat: no-repeat;
-      }
-      @media (orientation: portrait) {
-        
       }
 
     </style>
@@ -21,14 +17,14 @@
 
     <div id="mainDisplay" class="fullPage titlePage eng">
       <header>
-        <h1 id="title" style="font-size: 8em; align-self: center;"><span style="color: rgb(210,0,0)">I</span>n The Wake Of Thunde<span style="color: rgb(210,0,0)">r</span></h1>
+        <h1 id="title"><span style="color: rgb(210,0,0)">I</span>n The Wake Of Thunde<span style="color: rgb(210,0,0)">r</span></h1>
         <div id="language">
           <span class="button"><button><span class="square-button">Q</span><span style="color: white; text-decoration: underline red; text-underline-position: under;">English</span></button>
            <button id="titleCn" onclick="replaceWith('titlePageCn')">中文<span class="square-button">E</span></button></span>
         </div>
+        <div id="langButton"><button onclick="replaceWith('titlePageCn')">EN/中</button></div>
       </header>
       <main class="titleMain">
-          <!--Background image: Arthur's hat lying in the grass. 0.png-->
       </main>
       <div class="buttons">
           <button id="controlsEn" onclick="replaceWith('controlsPageEn')">Controls<span class="square-button">C</span></button>
@@ -50,9 +46,9 @@
             <span class="button"><button><span class="square-button">Q</span><span style="color: white; text-decoration: underline red; text-underline-position: under;">English</span></button>
              <button id="titleCn" onclick="replaceWith('titlePageCn')">中文<span class="square-button">E</span></button></span>
           </div>
+          <div id="langButton"><button onclick="replaceWith('titlePageCn')">EN/中</button></div>
       </header>
       <main class="titleMain">
-        <!--Background image: Arthur's hat lying in the grass. 0.png-->
       </main>
       <div class="buttons">
           <button id="controlsEn" onclick="replaceWith('controlsPageEn')">Controls<span class="square-button">C</span></button>
@@ -69,14 +65,14 @@
         <div id="language">
           <span class="button"><button id="titleEn" onclick="replaceWith('titlePageEn')"><span class="square-button">Q</span>English</button> <button><span style="color: white; text-decoration: underline red; text-underline-position: under;">中文</span><span class="square-button">E</span></button></span>
         </div>
+        <div id="langButton"><button onclick="replaceWith('titlePageEn')">EN/中</button></div>
       </header>
       <main class="titleMain">
-        <!--Background image: Arthur's hat lying in the grass. 0.png-->
       </main>
       <div class="buttons">
         <button id="controlsCn" onclick="replaceWith('controlsPageCn')">操作<span class="square-button">C</span></button>
         <button id="notesCn" onclick="replaceWith('notesPageCn')">声明<span class="square-button">N</span></button>
-        <button id="linksCn" onclick="replaceWith('linksPageCn')">社交帐号<span class="square-button">L</span></button>
+        <button id="linksCn" onclick="replaceWith('linksPageCn')">链接<span class="square-button">L</span></button>
         <button id="beginSceneCn" onclick="location.href='scene.html#cn'">开始<span class="square-button">↵</span></button>
         <button id="quit" onclick="location.href='../index.html'">退出<span class="square-button">←</span></button>
       </div>
@@ -89,7 +85,6 @@
 
     <div id="controlsPageEn" class="fullPage eng" style="display:none">
       <main>
-        <!--Background image: Arthur's hat lying in the grass. 0.png-->
         <p>Controls & notes:</p>
         <ol>
             <li><span>Click anywhere</span> on the image to continue.</li>
@@ -104,7 +99,6 @@
 
     <div id="controlsPageCn" class="fullPage cn" style="display:none">
       <main>
-        <!--Background image: Arthur's hat lying in the grass. 0.png-->
         <p>操作：</p>
         <ol>
             <li><span>点击</span>任何地方以继续。</li>
@@ -123,7 +117,6 @@
 
     <div id="notesPageEn" class="fullPage eng" style="display:none">
       <main>
-        <!--Background image: Arthur's hat lying in the grass. 0.png-->
         <p id="AN"><span>A/N</span>:<br>
           Henlo it's kaph :D I made this on a whim last year and spent a whole two months from October to Christmas making it.
           The ending hurt me a little too much so I thought I may as well make my own cutscenes, and so this is what I made.
@@ -142,7 +135,6 @@
 
     <div id="notesPageCn" class="fullPage cn" style="display:none">
       <main>
-        <!--Background image: Arthur's hat lying in the grass. 0.png-->
         <p id="AN"><span>( ;ↀ⌓ↀ)  ￢o(￣-￣ﾒ)</span><br>
           大家好这里茫茫~这是我22年年底打完1周目被狠狠地伤透了心之后的产物，查瑟这么配不给他造谣出个he我都觉得对不起我天天搁这截图的功夫（？）
           于是做了这个！这是我做的第一个假装是过场动画的饭，比较粗糙，见谅啦~
@@ -159,7 +151,6 @@
 
     <div id="linksPageEn" class="fullPage eng" style="display:none">
       <main>
-        <!--Background image: Arthur's hat lying in the grass. 0.png-->
         <p style="font-size: 1.3em;">Social links:</p>
         <ul>
             <li><span>Twitter: </span> <a href="https://www.twitter.com/es__kei" target="_blank">Zi @es__kei</a></li>
@@ -180,7 +171,6 @@
 
     <div id="linksPageCn" class="fullPage cn" style="display:none">
       <main>
-        <!--Background image: Arthur's hat lying in the grass. 0.png-->
         <p style="font-size: 1.3em;">社交帐号</p>
         <ul>
             <li><span>Twitter:</span> <a href="https://www.twitter.com/es__kei" target="_blank">Zi @es__kei</a></li>
