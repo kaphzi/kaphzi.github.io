@@ -51,6 +51,21 @@ a {
     font-size: 2em;
 }
 
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: RDR Lino Regular;
+    font-size: 1.5em;
+    padding-right: 30px;
+}
+#choices {
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+}
+
 @media (orientation: landscape) { img { height:100vh; } }
 @media (orientation: portrait) {
     img {

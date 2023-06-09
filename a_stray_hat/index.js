@@ -48,6 +48,7 @@ document.onkeydown = function (e) {
         case "Enter":
           lang = "en";
           document.getElementById("beginSceneEn").click();
+          break;
         case "Escape":
           document.getElementById("quit").click();
       }
@@ -70,6 +71,7 @@ document.onkeydown = function (e) {
         case "Enter":
           lang = "cn";
           document.getElementById("beginSceneCn").click();
+          break;
         case "Escape":
           document.getElementById("quit").click();
         

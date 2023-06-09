@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>A Stray Hat</title>
+        <link rel = "stylesheet" href="../templates/scene.css">
+        <style type="text/css">
+            .square-button {
+                background-color: white;
+                font-family: Chinese Rocks Rg;
+                color: black;
+                font-size: 1em;
+                padding: 0px 10px;
+                margin: 0px 10px;
+            }
+            @media (max-width: 1000px){
+                button {
+                    font-size: 3vw;
+                }
+                .choices {
+                    flex-direction: row;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main id="main">
+            <img id="mainImg" src="imagesEn/10.png" onclick="swapImg(1)">
+        </main>
+
+
+
+        <div id="end" style="display: none;">
+            <h1>END</h1>
+            <a id="quit" href="index.html">Quit</a>
+        </div>
+
+        <div id="image" style="display: none;">
+            <img id="mainImg" src="imagesEn/10.png" onclick="swapImg(1)">
+        </div>
+
+        <div id="choices">
+            <button id="button1" onclick="swapImg(1)">option1<span class="square-button">X</span></button>
+            <button id="button2" onclick="swapImg(0)">option2<span class="square-button">B</span></button>
+        </div>
+
+    </body>
+    <script src="var.js"></script>
+    <script src="scene.js"></script>
+</html>

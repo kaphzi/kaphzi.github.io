@@ -1,70 +1,164 @@
 var mainImg = document.getElementById("mainImg");
-var source;
-var imgNum = 0;
+var imgSrc = "imagesEn/";
+const choiceScenes = [50, 80, 85, 160];
 
+var lang = "en";
 
-//const choiceScenes = [50, 75, 80, 130, 175];
-// 50 -> 60 || 65
-// 130 -> 140 || 145
+var choices = document.getElementById("choices");
+choices.style = "display: none;";
+var button1 = document.getElementById("button1");
+var button2 = document.getElementById("button2");
 
-// 75 -> 90 || 85
-// 80 -> 90 || 85
-
-// 175 -> 180
-
-// all other cases img src += 10
-
-
-if(window.location.href == "scene.html#en"){
-    
+if(window.location.href.slice(-2,) == "en"){
+    imgSrc = "imagesEn/";
+    lang = "en";
+} else if(window.location.href.slice(-2,) == "cn"){
+    imgSrc = "imagesCn/";
+    document.getElementsByTagName("title")[0].innerHTML = "掉落的帽子";
+    document.getElementById("quit").innerHTML = "返回";
+    mainImg.src = imgSrc + "10.png";
+    lang = "cn";
 }
+
+
+
+
 
 document.onkeydown = function (e){
-    if(e.key == " " || e.key == "x" || e.key == "b" || e.key == "Enter"){
-        // if space or enter, continue
-        // if x or b, go to corresponding choice
-        swapImg(e.key);
+    if(imgNum == 125 || imgNum == 260){
+        if(e.key=="Escape"){
+            window.location.href = "index.html";
+        }
+        return;
     }
+
+    // if choice scene, only respond to keypress of x or b
+    // else 
+    if(choiceScenes.includes(imgNum)){
+        if(e.key == "x") {
+            // first choice (canon choice)
+            swapImg(1);
+        } else if(e.key == "b") {
+            // second non canonical choice
+            swapImg(0);
+        } else if(e.key=="Escape"){
+            window.location.href = "index.html";
+        }
+    } else {
+        // normal img
+        if(e.key == " " || e.key == "e" || e.key == "ArrowRight"){
+            // if space or enter, continue
+            // if x or b, go to corresponding choice
+            swapImg(1);
+        }
+    }
+
+
 }
 
-function swapImg(k) {
-    //source = "";
-    source = mainImg.src;
-    imgNum = parseInt(source.slice(source.lastIndexOf('/')+1, -4));
-    // source = source.slice(0,source.lastIndexOf('/')+1);
-    source = imgDir;
-
-    switch (imgNum){
-        case imgNum == 50:
-        case imgNum == 130:
-            console.log(imgNum);
-            if(k == "x"){
+function swapImg(n) {
+    switch(imgNum){
+        case 50:
+        case 80:
+        case 160:
+            if(n == 1){
                 imgNum += 10;
-            } else if (k=="b"){
+            } else {
                 imgNum += 15;
             }
-            source += imgNum + ".png";
             break;
-
-        case imgNum == 75:
-        case imgNum == 80:
-            if(k == "x"){
-                // responded positively; first choice
-                source += "90.png";
+        case 85:
+            if(n == 1){
+                imgNum = 90;
             } else {
-                // responded negatively; second choice
-                source += "85.png";
-            }   
+                imgNum = 95;
+            }
             break;
-
-        case imgNum == 175:
-            source += "180.png";
+        case 215:
+            imgNum = 220;
             break;
-        
         default:
             imgNum += 10;
-            source += imgNum + ".png";
     }
-    mainImg.src = source;
+    // if end of cutscene
+    if(imgNum == 115 || imgNum == 260){
+        document.getElementById("main").innerHTML = document.getElementById("end").innerHTML;
+        return;
+    }
+    mainImg.src = imgSrc + ""+imgNum + ".png";
+    
+    // choice buttons
+    if(choiceScenes.includes(imgNum)){
+        choices.style = "display: flex;";
+        mainImg.onclick = null;
+        console.log("disabled click img");
+        if(lang == "en"){
+            switch(imgNum){
+                case 50:
+                    button1.innerHTML = "I'll go with you.<span class=\"square-button\">X</span>";
+                    button2.innerHTML = "Good luck.<span class=\"square-button\">B</span>";
+                    break;
+                case 80:
+                case 85:
+                    button1.innerHTML = "I'm fine.<span class=\"square-button\">X</span>";
+                    button2.innerHTML = "You're right.<span class=\"square-button\">B</span>";
+                    break;
+                case 160:
+                    button1.innerHTML = "Separate.<span class=\"square-button\">X</span>";
+                    button2.innerHTML = "Stick with Arthur.<span class=\"square-button\">B</span>";
+                    break;
+            }
+        } else if(lang == "cn"){
+            switch(imgNum){
+                case 50:
+                    button1.innerHTML = "我和你一起去。<span class=\"square-button\">X</span>";
+                    button2.innerHTML = "祝你好运。<span class=\"square-button\">B</span>";
+                    break;
+                case 80:
+                case 85:
+                    button1.innerHTML = "我不累。<span class=\"square-button\">X</span>";
+                    button2.innerHTML = "你说得对。<span class=\"square-button\">B</span>";
+                    break;
+                case 160:
+                    button1.innerHTML = "分开找<span class=\"square-button\">X</span>";
+                    button2.innerHTML = "一起找<span class=\"square-button\">B</span>";
+                    break;
+            }
+        }
+        
+        console.log("display choices");
+
+    } else if(!choiceScenes.includes(imgNum)){
+        choices.style = "display: none;";
+        mainImg.onclick = function() {swapImg(1);};
+        console.log("reenable click img");
+        console.log("hide choices");
+    }
 
 }
+
+
+
+// mobile swipe
+
+// let touchstartX = 0
+// let touchendX = 0
+    
+// function checkDirection() {
+//   if (touchendX < touchstartX) {
+//     // swiped left; go to next img
+//     swapImg(1);
+//   }
+// //   if (touchendX > touchstartX) {
+// //     swapImg(0);
+// //   }
+// }
+
+// document.addEventListener('touchstart', e => {
+//   touchstartX = e.changedTouches[0].screenX
+// })
+
+// document.addEventListener('touchend', e => {
+//   touchendX = e.changedTouches[0].screenX
+//   checkDirection()
+// })
